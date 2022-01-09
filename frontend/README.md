@@ -1,4 +1,4 @@
-# Sochee Store frontend
+# Sochee Store Frontend
 
 - Frontend application to build quick catalog for seller
 
