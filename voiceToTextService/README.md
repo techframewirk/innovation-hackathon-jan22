@@ -1,15 +1,35 @@
 # Speech to Text Service
+This service converts audio to text
 
-This service provides an endpoint (`/voice-to-text`) which takes one audio file with name `*.wav` and converts audio to text.
+## Exposed endpoints
+```http request
+localhost:6000/voice-to-text
+```
+## Input
+audio file in `wav` format with label `file`
 
-## Note:
-* Python version should 3.7.x or newer.
+## output
+json with text converted from audio
+```json
+{
+  "text": "audio conversion."
+}
+```
 
-## Steps to Run
-* clone repo
-* cd speech-recognition
-* python -m venv env
-* chmod +x ./env/bin/activate
-* ./env/bin/activate
-* pip install -r requirements.txt
-* python api.py
+## How to run
+
+### prerequisites
+#### docker
+Please make sure you have docker installed and running in your machine. For complete installation instructions visit
+```http request
+https://docs.docker.com/get-docker/
+```
+
+###command to run
+before running below command switch to `voiceToTextService` directory
+```commandline
+docker compose up
+```
+above command will spin up the docker container and voice to text service will be up and running.
+
+Made with ❤️ by team **Soochee**
