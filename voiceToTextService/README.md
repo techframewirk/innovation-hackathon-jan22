@@ -5,8 +5,11 @@ This service converts audio to text
 ![Architecture Diagram](/voiceToTextService/architecture-diagram-Page-3.jpg)
 
 ## Exposed endpoints
-```http request
-localhost:6000/voice-to-text
+```
+URL: http://localhost:6000/voice-to-text
+Method: POST
+FormData:
+  - file: wav format file input
 ```
 ## Input
 audio file in `wav` format with label `file`
