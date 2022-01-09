@@ -4,6 +4,8 @@ This service provides endpoints for creating a seller store and it's catalog.
 It also provides access to a common master database which can be used by any seller
 to fasten creating their own catalog.
 
+![ONDC Backend](https://user-images.githubusercontent.com/27000128/148685062-8cf26e4f-c168-4391-88be-3b9fe9f56a36.png)
+
 ### `Requirements`
 - JRE - 11 version
 - JDK - 11 version
