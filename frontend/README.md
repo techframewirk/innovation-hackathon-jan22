@@ -1,4 +1,4 @@
-# Smart Catalog Builder
+# Sochee Store frontend
 
 - Frontend application to build quick catalog for seller
 
