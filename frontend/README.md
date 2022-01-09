@@ -10,7 +10,7 @@
 - yarn - 1.22.11 version
 
 ### `Installation`
-- git clone git@github.com:Open-network-for-digital-commerce/innovation-hackathon-jan22.git
+- git clone `git@github.com:Open-network-for-digital-commerce/innovation-hackathon-jan22.git`
 - cd innovation-hackathon-jan22/frontend
 - yarn install
 - touch .env
