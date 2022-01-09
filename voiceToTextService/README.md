@@ -1,6 +1,9 @@
 # Speech to Text Service
 This service converts audio to text
 
+## Architecture Diagram
+![Architecture Diagram](/voiceToTextService/architecture-diagram-Page-3.jpg)
+
 ## Exposed endpoints
 ```http request
 localhost:6000/voice-to-text
