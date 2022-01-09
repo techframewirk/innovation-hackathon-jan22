@@ -25,4 +25,27 @@
 ### `Run application`
 - Run Command `yarn start`
 
+### `Reuseable UI components`
+#### `AudioScanner` 
+This is React UI component which can record user voice and convert it to text using our `VoiceToText` api Service
+##### Usage
+```
+import AudioScanner from './components/AudioScanner'; 
+
+<AudioScanner handleChange={(value) => console.log(value)} />
+```
+##### Properities
+   - handleChange - A function callback to get the text after converstion
+
+#### `BarcodeScanner` 
+This is React UI component which can record barcode from webcamera and return the barcode as text
+##### Usage
+```
+import BarcodeScanner from './components/BarcodeScanner'; 
+
+<BarcodeScanner handleChange={(value) => console.log(value)} />
+```
+##### Properities
+   - handleChange - A function callback to get the text after converstion
+
 
