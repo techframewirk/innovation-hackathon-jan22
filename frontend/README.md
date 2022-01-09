@@ -3,7 +3,7 @@
 - Frontend application to build quick catalog for seller
 
 ## Architecture Diagram
-![Architecture Diagram](/docs/images/architecture-diagram-FrontEnd.jpg)
+![Architecture Diagram](/frontend/docs/images/architecture-diagram-FrontEnd.jpg)
 
 ### `Run application`
 
