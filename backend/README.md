@@ -1,7 +1,7 @@
-# Sooche API (For ONDC Digital Catalog)
+# Soochee API (For ONDC Digital Catalog)
 
 This service provides endpoints for creating a seller store and it's catalog.
-It also provides access to a common master database which can be used by any seller 
+It also provides access to a common master database which can be used by any seller
 to fasten creating their own catalog.
 
 ### `Requirements`
@@ -11,7 +11,9 @@ to fasten creating their own catalog.
 
 ### `Installation`
 - git clone `git@github.com:Open-network-for-digital-commerce/innovation-hackathon-jan22.git`
-- cd innovation-hackathon-jan22/backend
+- cd innovation-hackathon-jan22 
+- git checkout team-soochee
+- cd backend
 - mvn clean install
 
 ### `Run application`
@@ -25,7 +27,7 @@ METHOD: POST
 Payload:
 {
 	"name" : "Store",
-	"contactNumberList" : ["1111"],
+	"contactNumberList" : ["9876543210"],
 	"location" : {
 		"address" : {
 			"addressLine1" : "xy",
@@ -50,7 +52,7 @@ METHOD: GET
 Response:
 {
 	"name" : "Store",
-	"contactNumberList" : ["1111"],
+	"contactNumberList" : ["9876543210"],
 	"location" : {
 		"address" : {
 			"addressLine1" : "xy",
@@ -73,19 +75,108 @@ Response:
 ```
 METHOD: GET
 params: query
-Headers: {
-    'id': 'store_id'
-}
+Response:
+    [{
+        "id": "facd6de2-2b5c-469e-98df-e6eed83135e0",
+        "barcode": "8908007946456",
+        "sku": "Smoodies Aam Ka Panna: Sugar-Free",
+        "weight": "1",
+        "unit": "ltr",
+        "mrp": "200.00",
+        "image128": "https://media.goodbox.in/qo/mrp/Distributors/Smoothies/8908007946456.png",
+        "image256": "https://media.goodbox.in/qo/mrp/Distributors/Smoothies/8908007946456.png.png",
+        "parentCategory": "Fruit Juice & Drinks",
+        "subCategory": "Beverages",
+        "additionalInfo": null
+    }]
 ```
+
 
 ### Seller Catalog
 
 - `/catalog/products/add`
-    
+```
+METHOD: POST
+Headers: {
+    'id': 'store_id'
+}
+Response:
+200 OK
+```
+
 - `/catalog/products/addCustomProduct`
+```
+METHOD: POST
+Headers: {
+    'id': 'store_id'
+}
+Request:
+{
+	"price" : "100",
+	"quantity" : "2",
+	"sku" : "Milk",
+	"weight" : "1",
+	"unit" : "liter",
+	"mrp" : "200",
+	"image128" : "NA",
+	"image256" : "NA",
+	"parentCategory" : "XYZ",
+	"subCategory" : "YXZ"
+}
+Response:
+200 OK
+```
 
 - `/catalog/products/get`
+```
+METHOD: GET
+Headers: {
+    'id': 'store_id'
+}
+Response:
+[
+    {
+        "id": "e781d6c3-baa7-4e84-9c32-87be5845e50c",
+        "price": 100,
+        "quantity": 2,
+        "sku": "Milk",
+        "weight": "1",
+        "unit": "liter",
+        "mrp": "200",
+        "image128": "NA",
+        "image256": "NA",
+        "parentCategory": "XYZ",
+        "subCategory": "YXZ"
+    }
+]
+```
 
 - `/catalog/products/update`
+```
+METHOD: PUT
+Headers: {
+    'id': 'store_id'
+}
+Request:
+{
+	"price" : "0",
+	"quantity" : "0",
+	"masterId" : "facd6de2-2b5c-469e-98df-e6eed83135e0"
+}
+Response:
+200 OK
+```
 
 - `/catalog/products/delete`
+```
+METHOD: DELETE
+Headers: {
+    'id': 'store_id'
+}
+Request:
+{
+	"masterId" : "facd6de2-2b5c-469e-98df-e6eed83135e0"
+}
+Response:
+200 OK
+```
