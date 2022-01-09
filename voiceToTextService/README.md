@@ -25,7 +25,7 @@ Please make sure you have docker installed and running in your machine. For comp
 https://docs.docker.com/get-docker/
 ```
 
-###command to run
+### command to run
 before running below command switch to `voiceToTextService` directory
 ```commandline
 docker compose up
